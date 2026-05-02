@@ -57,7 +57,7 @@
     reveals.forEach(revealNow);
   }
 
-  /* ---- 4. Contact form (demo handler) ---- */
+  /* ---- 4. Contact form (Formspree integration) ---- */
   const form = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
   const submitBtn = document.getElementById('submitBtn');
@@ -68,14 +68,40 @@
       form.reportValidity();
       return;
     }
-    // Replace with real backend / mailto / Formspree etc.
-    submitBtn.textContent = '✓ Gesendet';
-    success.hidden = false;
-    form.reset();
-    setTimeout(() => {
-      submitBtn.textContent = 'Anfrage absenden →';
-      success.hidden = true;
-    }, 5000);
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Senden...';
+
+    const formData = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        submitBtn.textContent = '✓ Gesendet';
+        success.hidden = false;
+        form.reset();
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          success.hidden = true;
+          submitBtn.disabled = false;
+        }, 5000);
+      } else {
+        throw new Error('Fehler beim Senden');
+      }
+    })
+    .catch(error => {
+      console.error('Form submission error:', error);
+      submitBtn.textContent = 'Fehler - Versuche erneut';
+      setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 3000);
+    });
   });
 
   /* ---- 5. Footer year ---- */
