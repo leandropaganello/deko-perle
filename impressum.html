@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Impressum · Deko Perle</title>
+<meta name="description" content="Impressum von Deko Perle – Eventdekoration & Verleih in Wuppertal." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbf8f3;            /* pearl cream */
+    --ink:#26342a;           /* deep sage ink */
+    --muted:#5b6a60;
+    --sage:#9bbf9e;
+    --sage-soft:#dcecdd;
+    --sage-deep:#41664a;
+    --rose:#f1c8d3;
+    --rose-deep:#d99bad;
+    --gold:#d6b27a;
+    --card:#ffffff;
+    --border:#e2e9e1;
+    --radius:1rem;
+    --shadow-soft:0 10px 40px -15px rgba(60,90,65,.18);
+    --shadow-card:0 4px 20px -8px rgba(40,70,50,.12);
+    --grad-hero:linear-gradient(135deg,#e6f0e3 0%,#fbf3ea 50%,#f7dde4 100%);
+    --grad-rose:linear-gradient(135deg,#f7dde4,#f1c8d3);
+    --grad-sage:linear-gradient(135deg,#cfe1cf,#83a98a);
+    --transition:all .4s cubic-bezier(.4,0,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Nunito Sans',system-ui,sans-serif;
+    font-size:18px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    color:var(--sage-deep);
+    font-weight:500;
+    letter-spacing:-.01em;
+    line-height:1.15;
+  }
+  a{color:var(--sage-deep);text-decoration:none;transition:var(--transition)}
+  a:hover{color:var(--rose-deep)}
+  .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+
+  /* Header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    transition:var(--transition);
+    background:transparent;
+  }
+  header.scrolled{
+    background:rgba(251,248,243,.88);
+    backdrop-filter:blur(10px);
+    box-shadow:var(--shadow-card);
+  }
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1rem 1.5rem;max-width:1200px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:.75rem}
+  .brand-mark{
+    width:42px;height:42px;border-radius:50%;
+    background:var(--grad-sage);
+    display:flex;align-items:center;justify-content:center;
+    color:#fff;font-family:'Dancing Script',cursive;font-size:1.5rem;
+    box-shadow:var(--shadow-card);
+  }
+  .brand-name{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--sage-deep)}
+  .back-link{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:.65rem 1.25rem;border-radius:999px;
+    background:var(--grad-rose);color:#7a3a4d;
+    font-weight:600;font-size:.95rem;
+    box-shadow:var(--shadow-card);
+  }
+  .back-link:hover{box-shadow:var(--shadow-soft);transform:translateY(-1px);color:#7a3a4d}
+
+  /* Hero */
+  .hero{
+    background:var(--grad-hero);
+    padding:9rem 0 4rem;
+    text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .hero::before,.hero::after{
+    content:"";position:absolute;border-radius:50%;
+    filter:blur(60px);opacity:.55;pointer-events:none;
+  }
+  .hero::before{width:280px;height:280px;background:var(--rose);top:-60px;left:-80px}
+  .hero::after{width:320px;height:320px;background:var(--sage-soft);bottom:-100px;right:-100px}
+  .hero .eyebrow{
+    font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--rose-deep);
+  }
+  .hero h1{font-size:clamp(2.4rem,5vw,3.8rem);margin:.25rem 0 1rem}
+  .hero p{color:var(--muted);max-width:640px;margin:0 auto}
+
+  /* Content */
+  main.content{padding:4rem 0 6rem}
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:clamp(1.75rem,4vw,3rem);
+    box-shadow:var(--shadow-soft);
+  }
+  .card + .card{margin-top:1.75rem}
+  .card h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:1rem;position:relative;padding-bottom:.6rem}
+  .card h2::after{
+    content:"";position:absolute;left:0;bottom:0;
+    width:56px;height:3px;border-radius:3px;background:var(--grad-rose);
+  }
+  .card h3{font-size:1.25rem;margin:1.5rem 0 .5rem;color:var(--ink)}
+  .card p, .card li{color:var(--ink);margin-bottom:.75rem}
+  .card ul{padding-left:1.25rem}
+  .meta{
+    display:grid;gap:.4rem;
+    background:var(--sage-soft);
+    border-radius:.75rem;
+    padding:1.25rem 1.5rem;margin:1rem 0 1.5rem;
+  }
+  .meta strong{color:var(--sage-deep)}
+  small.note{color:var(--muted);font-size:.9rem;display:block;margin-top:1.5rem}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+  /* Footer */
+  footer{
+    background:var(--grad-sage);color:#fbf8f3;
+    padding:2.5rem 0;text-align:center;
+  }
+  footer .container{display:flex;flex-direction:column;gap:.75rem;align-items:center}
+  footer a{color:#fbf8f3;opacity:.9}
+  footer a:hover{opacity:1;color:#fff}
+  .foot-links{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+
+  @media (max-width:640px){
+    .brand-name{font-size:1.4rem}
+    .back-link{padding:.55rem 1rem;font-size:.85rem}
+    .hero{padding:7.5rem 0 3rem}
+  }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav aria-label="Hauptnavigation">
+    <a class="brand" href="index.html" aria-label="Zurück zur Deko Perle Startseite">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span class="brand-name">Deko Perle</span>
+    </a>
+    <a class="back-link" href="index.html">← Zur Startseite</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Impressum</h1>
+    <p>Angaben gemäß § 5 TMG und § 55 Abs. 2 RStV.</p>
+  </div>
+</section>
+
+<main class="content">
+  <div class="container">
+
+    <article class="card reveal">
+      <h2>Anbieterin</h2>
+      <div class="meta">
+        <span><strong>Maria Banic</strong></span>
+        <span>Deko Perle</span>
+        <span>Meininger Str 53</span>
+        <span>42389 Wuppertal · Deutschland</span>
+      </div>
+      <h3>Kontakt</h3>
+      <p>
+        Telefon: <a href="tel:+4915252605730">0152/52605730</a><br>
+        E-Mail: <a href="mailto:info@deko-perle.de">info@deko-perle.de</a><br>
+        Webseite: <a href="https://deko-perle.de">deko-perle.de</a>
+      </p>
+    </article>
+
+    <article class="card reveal">
+      <h2>Umsatzsteuer</h2>
+      <p>
+        Umsatzsteuer-ID: <strong>66 579 234 802</strong>
+      </p>
+    </article>
+
+    <article class="card reveal">
+      <h2>Verantwortlich für den Inhalt</h2>
+      <p>nach § 55 Abs. 2 RStV:</p>
+      <p>Maria Banic<br>Meininger Str 53<br>42389 Wuppertal<br>Deutschland</p>
+    </article>
+
+    <article class="card reveal">
+      <h2>EU-Streitschlichtung</h2>
+      <p>
+        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.
+        Unsere E-Mail-Adresse findest du oben im Impressum.
+      </p>
+      <h3>Verbraucherstreitbeilegung</h3>
+      <p>
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+    </article>
+
+    <article class="card reveal">
+      <h2>Haftungsausschluss</h2>
+      <p>
+        Die Inhalte dieser Webseite wurden mit größter Sorgfalt erstellt. Für die Richtigkeit,
+        Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.
+        Als Dienstanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten
+        verantwortlich. Nach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte
+        oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen,
+        die auf eine rechtswidrige Tätigkeit hinweisen.
+      </p>
+    </article>
+
+    <article class="card reveal">
+      <h2>Externe Links</h2>
+      <p>
+        Diese Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen
+        Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+        Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der
+        Seiten verantwortlich.
+      </p>
+    </article>
+
+    <article class="card reveal">
+      <h2>Urheberrecht</h2>
+      <p>
+        Die durch die Seitenbetreiberin erstellten Inhalte und Werke auf diesen Seiten unterliegen
+        dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
+        Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung
+        der jeweiligen Autorin bzw. Erstellerin.
+      </p>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Deko Perle · Wuppertal</p>
+    <div class="foot-links">
+      <a href="index.html">Startseite</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky header shadow
+  const header = document.getElementById('site-header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:.12});
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('is-visible'));
+  }
+</script>
+</body>
+</html>

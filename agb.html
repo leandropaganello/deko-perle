@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AGB · Deko Perle</title>
+<meta name="description" content="Allgemeine Geschäftsbedingungen von Deko Perle – Eventdekoration & Verleih in Wuppertal." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbf8f3;
+    --ink:#26342a;
+    --muted:#5b6a60;
+    --sage:#9bbf9e;
+    --sage-soft:#dcecdd;
+    --sage-deep:#41664a;
+    --rose:#f1c8d3;
+    --rose-deep:#d99bad;
+    --gold:#d6b27a;
+    --card:#ffffff;
+    --border:#e2e9e1;
+    --radius:1rem;
+    --shadow-soft:0 10px 40px -15px rgba(60,90,65,.18);
+    --shadow-card:0 4px 20px -8px rgba(40,70,50,.12);
+    --grad-hero:linear-gradient(135deg,#e6f0e3 0%,#fbf3ea 50%,#f7dde4 100%);
+    --grad-rose:linear-gradient(135deg,#f7dde4,#f1c8d3);
+    --grad-sage:linear-gradient(135deg,#cfe1cf,#83a98a);
+    --transition:all .4s cubic-bezier(.4,0,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:'Nunito Sans',system-ui,sans-serif;
+    font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    color:var(--sage-deep);font-weight:500;letter-spacing:-.01em;line-height:1.2;
+  }
+  a{color:var(--sage-deep);text-decoration:none;transition:var(--transition)}
+  a:hover{color:var(--rose-deep)}
+  .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:var(--transition);background:transparent}
+  header.scrolled{background:rgba(251,248,243,.88);backdrop-filter:blur(10px);box-shadow:var(--shadow-card)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;max-width:1200px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:.75rem}
+  .brand-mark{width:42px;height:42px;border-radius:50%;background:var(--grad-sage);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Dancing Script',cursive;font-size:1.5rem;box-shadow:var(--shadow-card)}
+  .brand-name{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--sage-deep)}
+  .back-link{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.25rem;border-radius:999px;background:var(--grad-rose);color:#7a3a4d;font-weight:600;font-size:.95rem;box-shadow:var(--shadow-card)}
+  .back-link:hover{box-shadow:var(--shadow-soft);transform:translateY(-1px);color:#7a3a4d}
+
+  .hero{background:var(--grad-hero);padding:9rem 0 4rem;text-align:center;position:relative;overflow:hidden}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none}
+  .hero::before{width:280px;height:280px;background:var(--rose);top:-60px;left:-80px}
+  .hero::after{width:320px;height:320px;background:var(--sage-soft);bottom:-100px;right:-100px}
+  .hero .eyebrow{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--rose-deep)}
+  .hero h1{font-size:clamp(2.4rem,5vw,3.8rem);margin:.25rem 0 1rem}
+  .hero p{color:var(--muted);max-width:640px;margin:0 auto}
+
+  main.content{padding:4rem 0 6rem}
+  @media(min-width:960px){
+    main.content > .container{display:grid;grid-template-columns:260px 1fr;gap:2.5rem;align-items:start}
+    aside.toc{position:sticky;top:6rem}
+  }
+
+  aside.toc{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-card);margin-bottom:1.75rem}
+  aside.toc h3{font-size:1.1rem;margin-bottom:.75rem;color:var(--ink)}
+  aside.toc ol{list-style:none;counter-reset:n;display:grid;gap:.4rem}
+  aside.toc li{counter-increment:n;font-size:.95rem}
+  aside.toc li::before{content:counter(n,decimal-leading-zero);color:var(--rose-deep);font-weight:700;margin-right:.5rem;font-family:'Cormorant Garamond',serif}
+  aside.toc a{color:var(--muted)}
+  aside.toc a:hover{color:var(--sage-deep)}
+
+  .articles{display:grid;gap:1.75rem}
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:clamp(1.75rem,4vw,2.75rem);box-shadow:var(--shadow-soft);
+    scroll-margin-top:6rem;
+  }
+  .card h2{font-size:clamp(1.5rem,2.8vw,2rem);margin-bottom:1rem;position:relative;padding-bottom:.6rem}
+  .card h2::after{content:"";position:absolute;left:0;bottom:0;width:56px;height:3px;border-radius:3px;background:var(--grad-rose)}
+  .card h3{font-size:1.2rem;margin:1.5rem 0 .5rem;color:var(--ink)}
+  .card p,.card li{margin-bottom:.75rem}
+  .card ul,.card ol.list{padding-left:1.25rem}
+  .meta{background:var(--sage-soft);border-radius:.75rem;padding:1rem 1.25rem;margin:1rem 0 1.5rem;display:grid;gap:.3rem}
+  .meta strong{color:var(--sage-deep)}
+  small.note{color:var(--muted);font-size:.9rem;display:block;margin-top:1.5rem}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+  footer{background:var(--grad-sage);color:#fbf8f3;padding:2.5rem 0;text-align:center}
+  footer .container{display:flex;flex-direction:column;gap:.75rem;align-items:center}
+  footer a{color:#fbf8f3;opacity:.9}
+  footer a:hover{opacity:1;color:#fff}
+  .foot-links{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+
+  @media(max-width:640px){
+    .brand-name{font-size:1.4rem}
+    .back-link{padding:.55rem 1rem;font-size:.85rem}
+    .hero{padding:7.5rem 0 3rem}
+  }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav aria-label="Hauptnavigation">
+    <a class="brand" href="index.html" aria-label="Zurück zur Deko Perle Startseite">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span class="brand-name">Deko Perle</span>
+    </a>
+    <a class="back-link" href="index.html">← Zur Startseite</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Allgemeine Geschäftsbedingungen</h1>
+    <p>Bedingungen für Dekorationsleistungen und den Verleih von Dekoartikeln durch Deko Perle.</p>
+  </div>
+</section>
+
+<main class="content">
+  <div class="container">
+
+    <aside class="toc reveal" aria-label="Inhaltsverzeichnis">
+      <h3>Inhalt</h3>
+      <ol>
+        <li><a href="#geltung">Geltungsbereich</a></li>
+        <li><a href="#vertrag">Vertragsabschluss</a></li>
+        <li><a href="#preise">Preise</a></li>
+        <li><a href="#zahlung">Zahlungsbedingungen</a></li>
+        <li><a href="#lieferung">Lieferung</a></li>
+        <li><a href="#widerruf">Widerrufsrecht</a></li>
+        <li><a href="#gewaehrleistung">Gewährleistung</a></li>
+        <li><a href="#haftung">Haftung</a></li>
+        <li><a href="#datenschutz">Datenschutz</a></li>
+        <li><a href="#schluss">Schlussbestimmungen</a></li>
+      </ol>
+    </aside>
+
+    <div class="articles">
+
+      <article class="card reveal" id="geltung">
+        <h2>1. Geltungsbereich</h2>
+        <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge, die zwischen Deko Perle und dir als Kunden über die Webseite www.deko-perle.de oder andere Kommunikationswege abgeschlossen werden.</p>
+      </article>
+
+      <article class="card reveal" id="vertrag">
+        <h2>2. Vertragsabschluss</h2>
+        <p>Der Vertrag kommt zustande, wenn du als Kunde das Angebot von Deko Perle annimmst. Dies kann durch eine Bestellung über die Webseite oder durch eine schriftliche Anfrage geschehen.</p>
+      </article>
+
+      <article class="card reveal" id="preise">
+        <h2>3. Preise</h2>
+        <p>Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird Umsatzsteuer nicht berechnet. Alle Preise werden in Euro € ausgezeichnet.</p>
+        <p>3.1 Solltest du einen Workshop buchen, dann wird der Betrag 7 – 14 Tage vor dem Termin bezahlt. Solltest du verhindert sein zu kommen, werden wir den Termin nachholen, eine Auszahlung ist nicht möglich oder nach Absprache.</p>
+        <p>3.2 Bei größeren Events wie Hochzeiten, JGA, Jubiläen, Firmenevents, Geburtstage etc. wird nach Vertragsabschluss eine Anzahlung von 50 % fällig. Der Restbetrag ist nach Erhalt der Rechnung fällig und wird binnen 7 Tagen bezahlt. Für An- und Abfahrt wird eine Gebühr von jeweils 20 € berechnet.</p>
+        <p>3.3 Angebote für Events, Workshops, JGA etc. sind innerhalb von 14 Tagen zu bestätigen. Sollte ein Angebot abgelehnt werden, werde ich eine Gebühr von 30 € zur Rechnung stellen. Da der Aufwand für Moodboard, Recherchen und vorherige Besichtigung des Ortes (Location) berücksichtigt werden müssen.</p>
+      </article>
+
+      <article class="card reveal" id="zahlung">
+        <h2>4. Zahlungsbedingungen</h2>
+        <p>Die Zahlung erfolgt per Überweisung, PayPal oder Bar. Der Kunde verpflichtet sich, den Rechnungsbetrag innerhalb von 7 – 14 Tagen oder nach Absprache nach Erhalt der Rechnung zu begleichen.</p>
+      </article>
+
+      <article class="card reveal" id="lieferung">
+        <h2>5. Lieferung</h2>
+        <p>Die Lieferung erfolgt an die vom Kunden angegebene Adresse. Die Lieferzeit beträgt in der Regel 5–7 Werktage, sofern nicht anders vereinbart.</p>
+      </article>
+
+      <article class="card reveal" id="widerruf">
+        <h2>6. Widerrufsrecht</h2>
+        <p>Der Kunde hat das Recht, binnen 14 Tagen ohne Angabe von Gründen den Vertrag zu widerrufen. Die Widerrufsfrist beginnt mit dem Erhalt der Ware, der Auftragsbestätigung der Veranstaltung oder des Workshops. Der Widerruf ist schriftlich an <a href="mailto:info@deko-perle.de">info@deko-perle.de</a> zu richten.</p>
+      </article>
+
+      <article class="card reveal" id="gewaehrleistung">
+        <h2>7. Gewährleistung</h2>
+        <p>Es gelten die gesetzlichen Gewährleistungsrechte. Bei Mängeln hat der Kunde das Recht auf Nacherfüllung, d. h. Nachbesserung oder Ersatzlieferung.</p>
+      </article>
+
+      <article class="card reveal" id="haftung">
+        <h2>8. Haftung</h2>
+        <p>Der Anbieter haftet nur für Schäden, die auf vorsätzlichem oder grob fahrlässigem Verhalten beruhen. Für leichte Fahrlässigkeit haftet der Anbieter nur bei Verletzung wesentlicher Vertragspflichten.</p>
+      </article>
+
+      <article class="card reveal" id="datenschutz">
+        <h2>9. Datenschutz</h2>
+        <p>Der Anbieter verpflichtet sich, die personenbezogenen Daten des Kunden vertraulich zu behandeln und nur im Rahmen der gesetzlichen Bestimmungen zu verwenden.</p>
+      </article>
+
+      <article class="card reveal" id="schluss">
+        <h2>10. Schlussbestimmungen</h2>
+        <p>Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist Wuppertal, NRW. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+        <small class="note">Stand: Mai 2026 · Vorlagentext, bitte vor Veröffentlichung rechtlich prüfen lassen.</small>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Deko Perle · Wuppertal</p>
+    <div class="foot-links">
+      <a href="index.html">Startseite</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('site-header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:.12});
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('is-visible'));
+  }
+
+  document.querySelectorAll('aside.toc a').forEach(a => {
+    a.addEventListener('click', () => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        target.style.transition = 'box-shadow .6s ease';
+        target.style.boxShadow = '0 0 0 3px rgba(217,155,173,.45), var(--shadow-soft)';
+        setTimeout(() => target.style.boxShadow = '', 1200);
+      }
+    });
+  });
+</script>
+</body>
+</html>

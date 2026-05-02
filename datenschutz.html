@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Datenschutzerklärung · Deko Perle</title>
+<meta name="description" content="Datenschutzerklärung von Deko Perle – Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Dancing+Script:wght@600;700&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbf8f3;
+    --ink:#26342a;
+    --muted:#5b6a60;
+    --sage:#9bbf9e;
+    --sage-soft:#dcecdd;
+    --sage-deep:#41664a;
+    --rose:#f1c8d3;
+    --rose-deep:#d99bad;
+    --gold:#d6b27a;
+    --card:#ffffff;
+    --border:#e2e9e1;
+    --radius:1rem;
+    --shadow-soft:0 10px 40px -15px rgba(60,90,65,.18);
+    --shadow-card:0 4px 20px -8px rgba(40,70,50,.12);
+    --grad-hero:linear-gradient(135deg,#e6f0e3 0%,#fbf3ea 50%,#f7dde4 100%);
+    --grad-rose:linear-gradient(135deg,#f7dde4,#f1c8d3);
+    --grad-sage:linear-gradient(135deg,#cfe1cf,#83a98a);
+    --transition:all .4s cubic-bezier(.4,0,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--ink);
+    font-family:'Nunito Sans',system-ui,sans-serif;
+    font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    color:var(--sage-deep);font-weight:500;letter-spacing:-.01em;line-height:1.2;
+  }
+  a{color:var(--sage-deep);text-decoration:none;transition:var(--transition)}
+  a:hover{color:var(--rose-deep)}
+  .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:var(--transition);background:transparent}
+  header.scrolled{background:rgba(251,248,243,.88);backdrop-filter:blur(10px);box-shadow:var(--shadow-card)}
+  nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;max-width:1200px;margin:0 auto}
+  .brand{display:flex;align-items:center;gap:.75rem}
+  .brand-mark{width:42px;height:42px;border-radius:50%;background:var(--grad-sage);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Dancing Script',cursive;font-size:1.5rem;box-shadow:var(--shadow-card)}
+  .brand-name{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--sage-deep)}
+  .back-link{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.25rem;border-radius:999px;background:var(--grad-rose);color:#7a3a4d;font-weight:600;font-size:.95rem;box-shadow:var(--shadow-card)}
+  .back-link:hover{box-shadow:var(--shadow-soft);transform:translateY(-1px);color:#7a3a4d}
+
+  .hero{background:var(--grad-hero);padding:9rem 0 4rem;text-align:center;position:relative;overflow:hidden}
+  .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none}
+  .hero::before{width:280px;height:280px;background:var(--rose);top:-60px;left:-80px}
+  .hero::after{width:320px;height:320px;background:var(--sage-soft);bottom:-100px;right:-100px}
+  .hero .eyebrow{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--rose-deep)}
+  .hero h1{font-size:clamp(2.4rem,5vw,3.8rem);margin:.25rem 0 1rem}
+  .hero p{color:var(--muted);max-width:640px;margin:0 auto}
+
+  main.content{padding:4rem 0 6rem;display:grid;gap:2rem;grid-template-columns:1fr;}
+  @media(min-width:960px){
+    main.content > .container{display:grid;grid-template-columns:260px 1fr;gap:2.5rem;align-items:start}
+    aside.toc{position:sticky;top:6rem}
+  }
+
+  aside.toc{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:1.5rem;box-shadow:var(--shadow-card);
+  }
+  aside.toc h3{font-size:1.1rem;margin-bottom:.75rem;color:var(--ink)}
+  aside.toc ol{list-style:none;counter-reset:n;display:grid;gap:.4rem}
+  aside.toc li{counter-increment:n;font-size:.95rem}
+  aside.toc li::before{
+    content:counter(n,decimal-leading-zero);
+    color:var(--rose-deep);font-weight:700;margin-right:.5rem;font-family:'Cormorant Garamond',serif;
+  }
+  aside.toc a{color:var(--muted)}
+  aside.toc a:hover{color:var(--sage-deep)}
+
+  .articles{display:grid;gap:1.75rem}
+  .card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:clamp(1.75rem,4vw,2.75rem);box-shadow:var(--shadow-soft);
+    scroll-margin-top:6rem;
+  }
+  .card h2{font-size:clamp(1.5rem,2.8vw,2rem);margin-bottom:1rem;position:relative;padding-bottom:.6rem}
+  .card h2::after{content:"";position:absolute;left:0;bottom:0;width:56px;height:3px;border-radius:3px;background:var(--grad-rose)}
+  .card h3{font-size:1.2rem;margin:1.5rem 0 .5rem;color:var(--ink)}
+  .card p,.card li{margin-bottom:.75rem}
+  .card ul{padding-left:1.25rem}
+  .meta{background:var(--sage-soft);border-radius:.75rem;padding:1rem 1.25rem;margin:1rem 0 1.5rem;display:grid;gap:.3rem}
+  .meta strong{color:var(--sage-deep)}
+  small.note{color:var(--muted);font-size:.9rem;display:block;margin-top:1.5rem}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.is-visible{opacity:1;transform:translateY(0)}
+
+  footer{background:var(--grad-sage);color:#fbf8f3;padding:2.5rem 0;text-align:center}
+  footer .container{display:flex;flex-direction:column;gap:.75rem;align-items:center}
+  footer a{color:#fbf8f3;opacity:.9}
+  footer a:hover{opacity:1;color:#fff}
+  .foot-links{display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center}
+
+  @media(max-width:640px){
+    .brand-name{font-size:1.4rem}
+    .back-link{padding:.55rem 1rem;font-size:.85rem}
+    .hero{padding:7.5rem 0 3rem}
+  }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <nav aria-label="Hauptnavigation">
+    <a class="brand" href="index.html" aria-label="Zurück zur Deko Perle Startseite">
+      <span class="brand-mark" aria-hidden="true">P</span>
+      <span class="brand-name">Deko Perle</span>
+    </a>
+    <a class="back-link" href="index.html">← Zur Startseite</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Rechtliches</span>
+    <h1>Datenschutzerklärung</h1>
+    <p>Transparente Informationen zur Verarbeitung deiner personenbezogenen Daten gemäß DSGVO.</p>
+  </div>
+</section>
+
+<main class="content">
+  <div class="container">
+
+    <aside class="toc reveal" aria-label="Inhaltsverzeichnis">
+      <h3>Inhalt</h3>
+      <ol>
+        <li><a href="#einleitung">Einleitung und Kontaktdaten</a></li>
+        <li><a href="#datenerfassung">Datenerfassung beim Besuch unserer Website</a></li>
+        <li><a href="#hosting">Hosting & Content-Delivery-Network</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#kontakt">Kontaktaufnahme</a></li>
+        <li><a href="#kommentarfunktion">Kommentarfunktion</a></li>
+        <li><a href="#seitenfunktionalitaeten">Seitenfunktionalitäten</a></li>
+        <li><a href="#tools">Tools und Sonstiges</a></li>
+        <li><a href="#rechte">Rechte des Betroffenen</a></li>
+        <li><a href="#dauer">Dauer der Speicherung personenbezogener Daten</a></li>
+      </ol>
+    </aside>
+
+    <div class="articles">
+
+      <article class="card reveal" id="einleitung">
+        <h2>1. Einleitung und Kontaktdaten des Verantwortlichen</h2>
+        <p>1.1 Wir freuen uns, dass Sie unsere Website besuchen, und bedanken uns für Ihr Interesse. Im Folgenden informieren wir Sie über den Umgang mit Ihren personenbezogenen Daten bei der Nutzung unserer Website. Personenbezogene Daten sind hierbei alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+        <p>1.2 Verantwortlicher für die Datenverarbeitung auf dieser Website im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+        <div class="meta">
+          <span><strong>Maria Banic</strong></span>
+          <span>Meininger Str. 53</span>
+          <span>42389 Wuppertal</span>
+          <span>Geschäftlich: Studio Alte Freiheit 3</span>
+          <span>42103 Wuppertal</span>
+          <span>Deutschland</span>
+          <span>Tel.: <a href="tel:+4915252605730">+49 152 52605730</a></span>
+          <span>E-Mail: <a href="mailto:info@deko-perle.de">info@deko-perle.de</a></span>
+        </div>
+        <p>Der für die Verarbeitung von personenbezogenen Daten Verantwortliche ist diejenige natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet.</p>
+        <p>1.3 Der Verantwortliche hat einen Datenschutzbeauftragten bestellt, dieser ist wie folgt zu erreichen:</p>
+        <div class="meta">
+          <span><strong>Maria Banic</strong></span>
+          <span>Meininger Str. 53</span>
+          <span>42389 Wuppertal</span>
+          <span>Geschäftlich: Studio Alte Freiheit 3</span>
+          <span>42103 Wuppertal</span>
+          <span>Deutschland</span>
+          <span>Tel.: <a href="tel:+4915252605730">+49 152 52605730</a></span>
+          <span>E-Mail: <a href="mailto:info@deko-perle.de">info@deko-perle.de</a></span>
+        </div>
+      </article>
+
+      <article class="card reveal" id="datenerfassung">
+        <h2>2. Datenerfassung beim Besuch unserer Website</h2>
+        <p>2.1 Bei der bloß informatorischen Nutzung unserer Website, also wenn Sie sich nicht registrieren oder uns anderweitig Informationen übermitteln, erheben wir nur solche Daten, die Ihr Browser an den Seitenserver übermittelt (sog. „Server-Logfiles“). Wenn Sie unsere Website aufrufen, erheben wir die folgenden Daten, die für uns technisch erforderlich sind, um Ihnen die Website anzuzeigen:</p>
+        <ul>
+          <li>Unsere besuchte Website</li>
+          <li>Datum und Uhrzeit zum Zeitpunkt des Zugriffes</li>
+          <li>Menge der gesendeten Daten in Byte</li>
+          <li>Quelle/Verweis, von welchem Sie auf die Seite gelangten</li>
+          <li>Verwendeter Browser</li>
+          <li>Verwendetes Betriebssystem</li>
+          <li>Verwendete IP-Adresse (ggf.: in anonymisierter Form)</li>
+        </ul>
+        <p>Die Verarbeitung erfolgt gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an der Verbesserung der Stabilität und Funktionalität unserer Website. Eine Weitergabe oder anderweitige Verwendung der Daten findet nicht statt. Wir behalten uns allerdings vor, die Server-Logfiles nachträglich zu überprüfen, sollten konkrete Anhaltspunkte auf eine rechtswidrige Nutzung hinweisen.</p>
+        <p>2.2 Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung personenbezogener Daten und anderer vertraulicher Inhalte (z. B. Bestellungen oder Anfragen an den Verantwortlichen) eine SSL-bzw. TLS-Verschlüsselung. Sie können eine verschlüsselte Verbindung an der Zeichenfolge „https://“ und dem Schloss-Symbol in Ihrer Browserzeile erkennen.</p>
+      </article>
+
+      <article class="card reveal" id="hosting">
+        <h2>3. Hosting & Content-Delivery-Network</h2>
+        <p>Für das Hosting unserer Website und die Darstellung der Seiteninhalte nutzen wir einen Anbieter, der seine Leistungen selbst oder durch ausgewählte Sub-Unternehmer ausschließlich auf Servern innerhalb der Europäischen Union erbringt.</p>
+        <p>Sämtliche auf unserer Website erhobenen Daten werden auf diesen Servern verarbeitet.</p>
+        <p>Wir haben mit dem Anbieter einen Auftragsverarbeitungsvertrag geschlossen, der den Schutz der Daten unserer Seitenbesucher sicherstellt und eine unberechtigte Weitergabe an Dritte untersagt.</p>
+      </article>
+
+      <article class="card reveal" id="cookies">
+        <h2>4. Cookies</h2>
+        <p>Um den Besuch unserer Website attraktiv zu gestalten und die Nutzung bestimmter Funktionen zu ermöglichen, verwenden wir Cookies, also kleine Textdateien, die auf Ihrem Endgerät abgelegt werden. Teilweise werden diese Cookies nach Schließen des Browsers automatisch wieder gelöscht (sog. „Session-Cookies“), teilweise verbleiben diese Cookies länger auf Ihrem Endgerät und ermöglichen das Speichern von Seiteneinstellungen (sog. „persistente Cookies“). Im letzteren Fall können Sie die Speicherdauer der Übersicht zu den Cookie-Einstellungen Ihres Webbrowsers entnehmen.</p>
+        <p>Sofern durch einzelne von uns eingesetzte Cookies auch personenbezogene Daten verarbeitet werden, erfolgt die Verarbeitung gemäß Art. 6 Abs. 1 lit. b DSGVO entweder zur Durchführung des Vertrages, gemäß Art. 6 Abs. 1 lit. a DSGVO im Falle einer erteilten Einwilligung oder gemäß Art. 6 Abs. 1 lit. f DSGVO zur Wahrung unserer berechtigten Interessen an der bestmöglichen Funktionalität der Website sowie einer kundenfreundlichen und effektiven Ausgestaltung des Seitenbesuchs.</p>
+        <p>Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und einzeln über deren Annahme entscheiden oder die Annahme von Cookies für bestimmte Fälle oder generell ausschließen können.</p>
+        <p>Bitte beachten Sie, dass bei Nichtannahme von Cookies die Funktionalität unserer Website eingeschränkt sein kann.</p>
+      </article>
+
+      <article class="card reveal" id="kontakt">
+        <h2>5. Kontaktaufnahme</h2>
+        <p>Im Rahmen der Kontaktaufnahme mit uns (z. B. per Kontaktformular oder E-Mail) werden personenbezogene Daten erhoben. Welche Daten im Falle der Nutzung eines Kontaktformulars erhoben werden, ist aus dem jeweiligen Kontaktformular ersichtlich. Diese Daten werden ausschließlich zum Zweck der Beantwortung Ihres Anliegens bzw. für die Kontaktaufnahme und die damit verbundene technische Administration gespeichert und verwendet.</p>
+        <p>Rechtsgrundlage für die Verarbeitung dieser Daten ist unser berechtigtes Interesse an der Beantwortung Ihres Anliegens gemäß Art. 6 Abs. 1 lit. f DSGVO. Zielt Ihre Kontaktierung auf den Abschluss eines Vertrages ab, so ist zusätzliche Rechtsgrundlage für die Verarbeitung Art. 6 Abs. 1 lit. b DSGVO. Ihre Daten werden nach abschließender Bearbeitung Ihrer Anfrage gelöscht. Dies ist der Fall, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschließend geklärt ist und sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+      </article>
+
+      <article class="card reveal" id="kommentarfunktion">
+        <h2>6. Kommentarfunktion</h2>
+        <p>Im Rahmen der Kommentarfunktion auf dieser Website werden neben Ihrem Kommentar auch Angaben zum Zeitpunkt der Erstellung des Kommentars und der von Ihnen gewählte Kommentatorenname gespeichert und auf dieser Website veröffentlicht. Ferner wird Ihre IP-Adresse mitprotokolliert und gespeichert. Diese Speicherung der IP-Adresse erfolgt aus Sicherheitsgründen und für den Fall, dass die betroffene Person durch einen abgegebenen Kommentar die Rechte Dritter verletzt oder rechtswidrige Inhalte postet. Ihre E-Mailadresse benötigen wir, um mit Ihnen in Kontakt zu treten, falls ein Dritter Ihren veröffentlichten Inhalt als rechtswidrig beanstanden sollte.</p>
+        <p>Rechtsgrundlagen für die Speicherung Ihrer Daten sind die Art. 6 Abs. 1 lit. b und f DSGVO. Wir behalten uns vor, Kommentare zu löschen, wenn sie von Dritten als rechtswidrig beanstandet werden.</p>
+      </article>
+
+      <article class="card reveal" id="seitenfunktionalitaeten">
+        <h2>7. Seitenfunktionalitäten</h2>
+        <h3>7.1 Einbindung des Instagram-Feeds via Lightwidget</h3>
+        <p>Auf unserer Website nutzen wir die Dienste von Lightwidget, einem Widget des Anbieters Black Sail Division, Krystian Żwak, Molczyn 17, Leszna Gorna, 43-445 Dziegielow, Polen (www.lightwidget.com), um Vorschaubilder unseres Instagram-Profils anzuzeigen. Dabei werden Cookies eingesetzt, also kleine Textdateien, die lokal im Zwischenspeicher Ihres Internet-Browsers gespeichert werden.</p>
+        <p>Durch das Widget wird eine Verbindung zu Servern der Meta Platforms Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2 Ireland („Instagram“) hergestellt, wenn Besucher unsere Website besuchen. Hierdurch erhält Instagram bestimmte Browser-Informationen, darunter auch Ihre IP-Adresse. In Einzelfällen ist auch eine Übertragung an Server der Meta Platforms Inc. mit Sitz in den USA möglich.</p>
+        <p>Alle oben beschriebenen Verarbeitungen, insbesondere das Setzen von Cookies für das Auslesen von Informationen auf dem verwendeten Endgerät, werden nur dann vollzogen, wenn Sie uns gemäß Art. 6 Abs. 1 lit. a DSGVO dazu Ihre ausdrückliche Einwilligung erteilt haben. Sie können Ihre erteilte Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie diesen Dienst in dem auf der Webseite bereitgestellten „Cookie-Consent-Tool“ deaktivieren.</p>
+        <p>Für die Übermittlung von Daten in die USA beruft sich der Anbieter auf Standardvertragsklauseln der Europäischen Kommission, welche die Einhaltung des europäischen Datenschutzniveaus sicherstellen sollen.</p>
+        <h3>7.2 Instagram-Plugins</h3>
+        <p>Auf unserer Website werden Plugins des sozialen Netzwerkes des folgenden Anbieters verwendet: Meta Platforms Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2 Irland.</p>
+        <p>Diese Plugins ermöglichen direkte Interaktionen mit Inhalten auf dem sozialen Netzwerk.</p>
+        <p>Um den Schutz Ihrer Daten beim Besuch unserer Website zu erhöhen, sind die Plugins zunächst deaktiviert mittels sogenannter „2-Klick“- oder „Shariff“-Lösung in die Seite eingebunden.</p>
+        <p>Diese Einbindung gewährleistet, dass beim Aufruf einer Seite unseres Webauftritts, die solche Plugins enthält, noch keine Verbindung mit den Servern des Anbieters hergestellt wird.</p>
+        <p>Erst wenn Sie die Plugins aktivieren und damit gemäß Art. 6 Abs. 1 lit. a DSGVO Ihre Einwilligung in die Datenübermittlung erteilen, stellt Ihr Browser eine direkte Verbindung zu den Servern des Anbieters her. Hierbei werden, unabhängig von einem Login in ein vorhandenes Nutzerprofil, in bestimmtem Umfang Informationen über Ihr verwendetes Endgerät (darunter Ihre IP-Adresse), Ihren Browser und Ihren Seitenverlauf an den Anbieter übermittelt und dort gegebenenfalls weiterverarbeitet.</p>
+        <p>Wenn Sie in ein vorhandenes Nutzerprofil auf dem sozialen Netzwerk des Anbieters eingeloggt sind, werden Informationen zu über die Plugins vollzogenen Interaktionen außerdem dort veröffentlicht und Ihren Kontakten angezeigt.</p>
+        <p>Sie können Ihre Einwilligung jederzeit widerrufen indem Sie das aktivierte Plugin durch erneutes Anklicken wieder deaktivieren. Der Widerruf hat jedoch keinen Einfluss auf die Daten, die bereits an den Anbieter übertragen wurden.</p>
+        <p>Daten können zudem übertragen werden: Meta Platforms Inc., USA.</p>
+        <p>Wir haben mit dem Anbieter einen Auftragsverarbeitungsvertrag geschlossen, der den Schutz der Daten unserer Seitenbesucher sicherstellt und eine unberechtigte Weitergabe an Dritte untersagt.</p>
+        <p>Für Datenübermittlungen in die USA hat sich der Anbieter dem EU-US-Datenschutzrahmen (EU-US Data Privacy Framework) angeschlossen, der auf Basis eines Angemessenheitsbeschlusses der Europäischen Kommission die Einhaltung des europäischen Datenschutzniveaus sicherstellt.</p>
+      </article>
+
+      <article class="card reveal" id="tools">
+        <h2>8. Tools und Sonstiges</h2>
+        <p><strong>Cookie-Consent-Tool</strong></p>
+        <p>Diese Website nutzt zur Einholung wirksamer Nutzereinwilligungen für einwilligungspflichtige Cookies und cookie-basierte Anwendungen ein sog. „Cookie-Consent-Tool“. Das „Cookie-Consent-Tool“ wird Nutzern bei Seitenaufruf in Form einer interaktiven Benutzeroberfläche angezeigt, auf welcher sich per Häkchensetzung Einwilligungen für bestimmte Cookies und/oder cookie-basierte Anwendungen erteilen lassen. Hierbei werden durch den Einsatz des Tools alle einwilligungspflichtigen Cookies/Dienste nur dann geladen, wenn der jeweilige Nutzer entsprechende Einwilligungen per Häkchensetzung erteilt. So wird sichergestellt, dass nur im Falle einer erteilten Einwilligung derartige Cookies auf dem jeweiligen Endgerät des Nutzers gesetzt werden.</p>
+        <p>Das Tool setzt technisch notwendige Cookies, um Ihre Cookie-Präferenzen zu speichern. Personenbezogene Nutzerdaten werden hierbei grundsätzlich nicht verarbeitet.</p>
+        <p>Kommt es im Einzelfall zum Zwecke der Speicherung, Zuordnung oder Protokollierung von Cookie-Einstellungen doch zur Verarbeitung personenbezogener Daten (wie etwa der IP-Adresse), erfolgt diese gemäß Art. 6 Abs. 1 lit. f DSGVO auf Basis unseres berechtigten Interesses an einem rechtskonformen, nutzerspezifischen und nutzerfreundlichen Einwilligungsmanagement für Cookies und mithin an einer rechtskonformen Ausgestaltung unseres Internetauftritts.</p>
+        <p>Weitere Rechtsgrundlage für die Verarbeitung ist ferner Art. 6 Abs. 1 lit. c DSGVO. Wir unterliegen als Verantwortliche der rechtlichen Verpflichtung, den Einsatz technisch nicht notwendiger Cookies von der jeweiligen Nutzereinwilligung abhängig zu machen.</p>
+        <p>Soweit erforderlich, haben wir mit dem Anbieter einen Auftragsverarbeitungsvertrag geschlossen, der den Schutz der Daten unserer Seitenbesucher sicherstellt und eine unberechtigte Weitergabe an Dritte untersagt.</p>
+        <p>Weitere Informationen zum Betreiber und den Einstellungsmöglichkeiten des Cookie-Consent-Tools finden Sie direkt in der entsprechenden Benutzeroberfläche auf unserer Website.</p>
+      </article>
+
+      <article class="card reveal" id="rechte">
+        <h2>9. Rechte des Betroffenen</h2>
+        <p>9.1 Das geltende Datenschutzrecht gewährt Ihnen gegenüber dem Verantwortlichen hinsichtlich der Verarbeitung Ihrer personenbezogenen Daten die nachstehenden Betroffenenrechte (Auskunfts- und Interventionsrechte), wobei für die jeweiligen Ausübungsvoraussetzungen auf die angeführte Rechtsgrundlage verwiesen wird:</p>
+        <ul>
+          <li>Auskunftsrecht gemäß Art. 15 DSGVO</li>
+          <li>Recht auf Berichtigung gemäß Art. 16 DSGVO</li>
+          <li>Recht auf Löschung gemäß Art. 17 DSGVO</li>
+          <li>Recht auf Einschränkung der Verarbeitung gemäß Art. 18 DSGVO</li>
+          <li>Recht auf Unterrichtung gemäß Art. 19 DSGVO</li>
+          <li>Recht auf Datenübertragbarkeit gemäß Art. 20 DSGVO</li>
+          <li>Recht auf Widerruf erteilter Einwilligungen gemäß Art. 7 Abs. 3 DSGVO</li>
+          <li>Recht auf Beschwerde gemäß Art. 77 DSGVO</li>
+        </ul>
+        <p>9.2 WIDERSPRUCHSRECHT</p>
+        <p>WENN WIR IM RAHMEN EINER INTERESSENABWÄGUNG IHRE PERSONENBEZOGENEN DATEN AUFGRUND UNSERES ÜBERWIEGENDEN BERECHTIGTEN INTERESSES VERARBEITEN, HABEN SIE DAS JEDERZEITIGE RECHT, AUS GRÜNDEN, DIE SICH AUS IHRER BESONDEREN SITUATION ERGEBEN, GEGEN DIESE VERARBEITUNG WIDERSPRUCH MIT WIRKUNG FÜR DIE ZUKUNFT EINZULEGEN.</p>
+        <p>MACHEN SIE VON IHREM WIDERSPRUCHSRECHT GEBRAUCH, BEENDEN WIR DIE VERARBEITUNG DER BETROFFENEN DATEN. EINE WEITERVERARBEITUNG BLEIBT ABER VORBEHALTEN, WENN WIR ZWINGENDE SCHUTZWÜRDIGE GRÜNDE FÜR DIE VERARBEITUNG NACHWEISEN KÖNNEN, DIE IHRE INTERESSEN, GRUNDRECHTE UND GRUNDFREIHEITEN ÜBERWIEGEN, ODER WENN DIE VERARBEITUNG DER GELTENDMACHUNG, AUSÜBUNG ODER VERTEIDIGUNG VON RECHTSANSPRÜCHEN DIENT.</p>
+        <p>WERDEN IHRE PERSONENBEZOGENEN DATEN VON UNS VERARBEITET, UM DIREKTWERBUNG ZU BETREIBEN, HABEN SIE DAS RECHT, JEDERZEIT WIDERSPRUCH GEGEN DIE VERARBEITUNG SIE BETREFFENDER PERSONENBEZOGENER DATEN ZUM ZWECKE DERARTIGER WERBUNG EINZULEGEN. SIE KÖNNEN DEN WIDERSPRUCH WIE OBEN BESCHRIEBEN AUSÜBEN.</p>
+        <p>MACHEN SIE VON IHREM WIDERSPRUCHSRECHT GEBRAUCH, BEENDEN WIR DIE VERARBEITUNG DER BETROFFENEN DATEN ZU DIREKTWERBEZWECKEN.</p>
+      </article>
+
+      <article class="card reveal" id="dauer">
+        <h2>10. Dauer der Speicherung personenbezogener Daten</h2>
+        <p>Die Dauer der Speicherung von personenbezogenen Daten bemisst sich anhand der jeweiligen Rechtsgrundlage, am Verarbeitungszweck und – sofern einschlägig – zusätzlich anhand der jeweiligen gesetzlichen Aufbewahrungsfrist (z. B. handels- und steuerrechtliche Aufbewahrungsfristen).</p>
+        <p>Bei der Verarbeitung von personenbezogenen Daten auf Grundlage einer ausdrücklichen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO werden die betroffenen Daten so lange gespeichert, bis Sie Ihre Einwilligung widerrufen.</p>
+        <p>Existieren gesetzliche Aufbewahrungsfristen für Daten, die im Rahmen rechtsgeschäftlicher bzw. rechtsgeschäftsähnlicher Verpflichtungen auf der Grundlage von Art. 6 Abs. 1 lit. b DSGVO verarbeitet werden, werden diese Daten nach Ablauf der Aufbewahrungsfristen routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung oder Vertragsanbahnung erforderlich sind und/oder unsererseits kein berechtigtes Interesse an der Weiterspeicherung fortbesteht.</p>
+        <p>Bei der Verarbeitung von personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO werden diese Daten so lange gespeichert, bis Sie Ihr Widerspruchsrecht nach Art. 21 Abs. 1 DSGVO ausüben, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</p>
+        <p>Bei der Verarbeitung von personenbezogenen Daten zum Zwecke der Direktwerbung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO werden diese Daten so lange gespeichert, bis Sie Ihr Widerspruchsrecht nach Art. 21 Abs. 2 DSGVO ausüben.</p>
+        <p>Sofern sich aus den sonstigen Informationen dieser Erklärung über spezifische Verarbeitungssituationen nichts anderes ergibt, werden gespeicherte personenbezogene Daten im Übrigen dann gelöscht, wenn sie für die Zwecke, für die sie erhoben oder auf sonstige Weise verarbeitet wurden, nicht mehr notwendig sind.</p>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> Deko Perle · Wuppertal</p>
+    <div class="foot-links">
+      <a href="index.html">Startseite</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('site-header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:.12});
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Smooth highlight when jumping via TOC
+  document.querySelectorAll('aside.toc a').forEach(a => {
+    a.addEventListener('click', () => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        target.style.transition = 'box-shadow .6s ease';
+        target.style.boxShadow = '0 0 0 3px rgba(217,155,173,.45), var(--shadow-soft)';
+        setTimeout(() => target.style.boxShadow = '', 1200);
+      }
+    });
+  });
+</script>
+</body>
+</html>
