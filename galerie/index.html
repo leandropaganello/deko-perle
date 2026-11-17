@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Galerie · Deko Perle · Hochzeiten, Workshops & Events in Wuppertal</title>
+<meta name="description" content="Bildergalerie von Deko Perle: Hochzeiten, Workshops, Events, JGA und Geburtstage aus Wuppertal – echte Dekorationen und Trockenblumen-Kreationen." />
+<link rel="canonical" href="https://www.deko-perle.de/galerie/" />
+<meta name="theme-color" content="#fbf8f4" />
+<meta name="robots" content="index, follow" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:site_name" content="Deko Perle" />
+<meta property="og:title" content="Galerie · Deko Perle" />
+<meta property="og:description" content="Hochzeiten, Workshops, Events, JGA und Geburtstage – echte Dekorationen aus Wuppertal." />
+<meta property="og:url" content="https://www.deko-perle.de/galerie/" />
+<meta property="og:image" content="https://www.deko-perle.de/assets/img/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Galerie · Deko Perle" />
+<meta name="twitter:image" content="https://www.deko-perle.de/assets/img/og-image.jpg" />
+
+<link rel="icon" href="../assets/img/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="../assets/logo-perle.png" sizes="48x48" type="image/png" />
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+<link rel="preload" href="../assets/fonts/nunito-sans-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="../assets/fonts/cormorant-garamond-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="../assets/fonts/fonts.css" />
+<style>
+  :root{
+    --bg:#fbf8f4;
+    --ink:#232b24;
+    --muted:#55635a;
+    --sage:#8fb492;
+    --sage-soft:#dcecdd;
+    --sage-deep:#3a5541;
+    --rose:#f1c8d3;
+    --rose-deep:#a34a63;
+    --gold:#a07c3f;
+    --line:#dfe4dc;
+    --grad-sage:linear-gradient(135deg,#547a59,#3a5541);
+    --shadow-soft:0 10px 40px -15px rgba(58,85,65,.22);
+    --shadow-card:0 4px 20px -8px rgba(58,85,65,.18);
+    --shadow-glow:0 20px 60px -20px rgba(163,74,99,.3);
+    --radius:1rem;
+    --t:.4s cubic-bezier(.4,0,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Nunito Sans',system-ui,sans-serif;
+    font-size:18px;line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    color:var(--sage-deep);
+    font-weight:500;
+    line-height:1.15;
+    letter-spacing:-.01em;
+  }
+  a{color:inherit;text-decoration:none}
+  a:hover{color:var(--rose-deep)}
+  img{display:block;max-width:100%}
+  :focus-visible{outline:3px solid var(--rose-deep);outline-offset:3px;border-radius:8px}
+  [id]{scroll-margin-top:100px}
+
+  .container{width:100%;max-width:1240px;margin:0 auto;padding:0 1.5rem}
+
+  .skip-link{position:absolute;top:-100px;left:1rem;z-index:200;padding:.85rem 1.5rem;
+    background:var(--sage-deep);color:#fff;font-weight:600;border-radius:0 0 12px 12px;transition:top .2s}
+  .skip-link:focus{top:0;color:#fff}
+
+  /* ===== Navbar ===== */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    transition:var(--t);
+    background:transparent;
+  }
+  header.nav.scrolled{
+    background:rgba(251,248,244,.92);
+    backdrop-filter:blur(10px);
+    box-shadow:var(--shadow-card);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+  .brand{display:flex;align-items:center;gap:.75rem}
+  .brand-name{font-family:'Dancing Script',cursive;font-size:1.6rem;color:var(--sage-deep)}
+  nav ul{list-style:none;display:flex;gap:2.25rem}
+  nav a.link{
+    font-weight:500;color:var(--sage-deep);
+    position:relative;transition:var(--t);
+  }
+  nav a.link::after{
+    content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;background:var(--sage);transition:width .3s;
+  }
+  nav a.link:hover::after{width:100%}
+  nav a.link[aria-current="page"]{color:var(--rose-deep)}
+  nav a.link[aria-current="page"]::after{width:100%;background:var(--rose-deep)}
+  .cta{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--grad-sage);
+    color:#fff;padding:.7rem 1.4rem;border-radius:999px;
+    font-weight:600;box-shadow:var(--shadow-soft);transition:var(--t);
+  }
+  .cta:hover{box-shadow:var(--shadow-glow);transform:translateY(-1px);color:#fff}
+  .burger{display:none;background:var(--sage-soft);border:0;border-radius:999px;padding:.55rem .8rem;cursor:pointer;color:var(--sage-deep);font-size:1.1rem}
+  .mobile{display:none;background:rgba(251,248,244,.98);border-top:1px solid var(--line)}
+  .mobile ul{flex-direction:column;gap:.25rem;padding:1rem 0}
+  .mobile a{display:block;padding:.7rem 0;font-weight:500;color:var(--sage-deep)}
+  .mobile .sub-item a{padding-left:1.4rem;font-weight:400;color:var(--muted)}
+  .mobile .sub-item:first-of-type{padding-top:.35rem}
+
+  /* ===== Dropdown „Leistungen“ ===== */
+  .nav-inner .has-sub{position:relative}
+  .nav-inner .caret{
+    display:inline-block;margin-left:.3rem;
+    border-left:5px solid transparent;border-right:5px solid transparent;
+    border-top:6px solid currentColor;vertical-align:middle;transition:var(--t);
+  }
+  .nav-inner .has-sub:hover .caret{transform:rotate(180deg)}
+  .nav-inner .submenu{
+    position:absolute;top:calc(100% + .5rem);left:50%;
+    transform:translateX(-50%) translateY(8px);
+    min-width:235px;list-style:none;padding:.45rem;
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    box-shadow:var(--shadow-soft);display:grid;gap:.1rem;
+    opacity:0;visibility:hidden;transition:var(--t);z-index:60;
+  }
+  .nav-inner .has-sub:hover .submenu,
+  .nav-inner .has-sub:focus-within .submenu{
+    opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);
+  }
+  .nav-inner .submenu a{
+    display:block;padding:.55rem .9rem;border-radius:9px;
+    font-size:.95rem;color:var(--ink);
+  }
+  .nav-inner .submenu a:hover{background:var(--sage-soft);color:var(--rose-deep)}
+
+  /* ===== Hero ===== */
+  .hero{
+    padding:9rem 0 3rem;
+    background:linear-gradient(135deg,#e7f1e3 0%,#fdf6ee 50%,#fbe5ec 100%);
+    text-align:center;
+  }
+  .hero .script{font-family:'Dancing Script',cursive;color:var(--rose-deep);font-size:1.9rem;display:block}
+  .hero h1{font-size:clamp(2.4rem,5vw,4rem);margin:.5rem 0 1rem}
+  .hero p{max-width:640px;margin:0 auto;color:var(--muted);font-size:1.1rem}
+
+  /* ===== Filters ===== */
+  .filters{
+    display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;
+    padding:2.5rem 0 1.5rem;
+  }
+  .filter-btn{
+    border:1px solid var(--line);
+    background:#fff;color:var(--sage-deep);
+    padding:.6rem 1.2rem;border-radius:999px;
+    font-family:inherit;font-size:.95rem;font-weight:600;
+    cursor:pointer;transition:var(--t);
+  }
+  .filter-btn:hover{border-color:var(--sage);transform:translateY(-1px)}
+  .filter-btn.active{
+    background:var(--grad-sage);
+    color:#fff;border-color:transparent;box-shadow:var(--shadow-soft);
+  }
+  .count{
+    text-align:center;color:var(--muted);font-size:.95rem;margin-bottom:1.5rem;
+  }
+
+  /* ===== Gallery grid ===== */
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:1.25rem;
+    padding-bottom:5rem;
+  }
+  .card{
+    position:relative;
+    aspect-ratio:4/5;
+    overflow:hidden;border-radius:var(--radius);
+    box-shadow:var(--shadow-card);
+    background:var(--sage-soft);
+    border:0;padding:0;width:100%;
+    cursor:zoom-in;
+    transition:var(--t);
+    opacity:0;transform:translateY(18px) scale(.98);
+  }
+  .card.show{opacity:1;transform:none}
+  .card:hover{box-shadow:var(--shadow-soft);transform:translateY(-4px)}
+  .card.tall{aspect-ratio:3/5}
+  .card.wide{grid-column:span 2;aspect-ratio:16/10}
+  @media (max-width:640px){.card.wide{grid-column:span 1;aspect-ratio:4/5}}
+  .card img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform .8s ease;
+  }
+  .card:hover img{transform:scale(1.07)}
+  .card .overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(27,40,31,.78),transparent 55%);
+    opacity:0;transition:var(--t);
+    pointer-events:none;
+  }
+  .card:hover .overlay,.card:focus-visible .overlay{opacity:1}
+  .badge{
+    position:absolute;top:14px;left:14px;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(6px);
+    color:var(--sage-deep);
+    padding:.3rem .8rem;border-radius:999px;
+    font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  }
+  .caption{
+    position:absolute;left:18px;right:18px;bottom:16px;
+    color:#fff;font-weight:500;text-align:left;
+    transform:translateY(8px);opacity:0;transition:var(--t);
+  }
+  .card:hover .caption,.card:focus-visible .caption{opacity:1;transform:none}
+  /* Overlay-Button über das ganze Tile — macht das Tile klickbar & per Tastatur bedienbar */
+  .card-btn{position:absolute;inset:0;z-index:2;background:none;border:0;padding:0;cursor:zoom-in;font:inherit}
+  .card .badge,.card .caption{z-index:3;pointer-events:none}
+  /* Touch: keine :hover-Geste — Beschriftung und Overlay dauerhaft zeigen */
+  @media (hover:none){
+    .card{cursor:default}
+    .card-btn{cursor:default}
+    .card .overlay{opacity:1}
+    .caption{opacity:1;transform:none}
+  }
+
+  /* ===== Lightbox ===== */
+  .lightbox{
+    position:fixed;inset:0;z-index:100;
+    background:rgba(20,30,25,.94);
+    display:none;align-items:center;justify-content:center;
+    padding:2rem;
+    opacity:0;transition:opacity .3s;
+  }
+  .lightbox.open{display:flex;opacity:1}
+  .lightbox img{
+    max-width:92vw;max-height:82vh;
+    border-radius:.75rem;box-shadow:0 30px 80px rgba(0,0,0,.5);
+  }
+  .lb-btn{
+    position:absolute;top:50%;transform:translateY(-50%);
+    background:rgba(255,255,255,.15);color:#fff;border:0;
+    width:52px;height:52px;border-radius:50%;font-size:1.6rem;cursor:pointer;
+    transition:var(--t);backdrop-filter:blur(6px);
+  }
+  .lb-btn:hover{background:rgba(255,255,255,.3)}
+  .lb-prev{left:2rem}.lb-next{right:2rem}
+  .lb-close{
+    top:1.5rem;right:1.5rem;transform:none;
+    width:44px;height:44px;font-size:1.3rem;
+  }
+  .lb-cap{
+    position:absolute;bottom:1.5rem;left:0;right:0;text-align:center;
+    color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.2rem;
+    text-shadow:0 2px 8px rgba(0,0,0,.5);padding:0 1.5rem;
+  }
+  @media (max-width:640px){
+    .lb-prev{left:.5rem}.lb-next{right:.5rem}
+    .lb-btn{width:42px;height:42px;font-size:1.2rem}
+  }
+
+  /* ===== Footer ===== */
+  footer{
+    background:linear-gradient(135deg,#567a5b 0%,#3f5c46 100%);
+    color:#fff;
+    padding:3rem 0;text-align:center;
+  }
+  footer .script{font-family:'Dancing Script',cursive;font-size:1.6rem;color:#f3d3dc;margin-bottom:.5rem;display:block}
+  footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  footer a:hover{color:#f3d3dc}
+  .legal{margin-top:1rem;font-size:.9rem;display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap}
+
+  /* Responsive nav */
+  @media (max-width:880px){
+    nav ul.desk,.cta.desk{display:none}
+    .burger{display:inline-flex}
+    .mobile.open{display:block}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .card{transition:none}
+    .card img{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="../index.html" class="brand">
+      <img src="../assets/logo-perle.png" alt="" width="48" height="48" />
+      <span class="brand-name">Deko Perle</span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <ul class="desk">
+        <li><a class="link" href="../index.html#ueber-uns">Über uns</a></li>
+        <li class="has-sub">
+          <a class="link" href="../index.html#leistungen" aria-haspopup="true" aria-expanded="false">Leistungen <span class="caret" aria-hidden="true"></span></a>
+          <ul class="submenu">
+            <li><a href="../index.html#hochzeiten">Hochzeiten</a></li>
+            <li><a href="../index.html#geburtstage">Geburtstage</a></li>
+            <li><a href="../index.html#events">Events &amp; Feiern</a></li>
+            <li><a href="../workshops.html">Workshops</a></li>
+            <li><a href="../index.html#verleih">Deko-Verleih</a></li>
+            <li><a href="../index.html#konzept">Konzept &amp; Beratung</a></li>
+          </ul>
+        </li>
+        <li><a class="link" href="index.html" aria-current="page">Galerie</a></li>
+        <li><a class="link" href="../empfehlungen.html">Empfehlungen</a></li>
+        <li><a class="link" href="../index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a href="https://dekoperle.simplybook.it/v2/#book" class="cta desk" rel="noopener">Frag mich an</a>
+    <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile">☰</button>
+  </div>
+  <div class="mobile" id="mobile">
+    <div class="container">
+      <ul>
+        <li><a href="../index.html#ueber-uns">Über uns</a></li>
+        <li><a href="../index.html#leistungen">Leistungen</a></li>
+        <li class="sub-item"><a href="../index.html#hochzeiten">Hochzeiten</a></li>
+        <li class="sub-item"><a href="../index.html#geburtstage">Geburtstage</a></li>
+        <li class="sub-item"><a href="../index.html#events">Events &amp; Feiern</a></li>
+        <li class="sub-item"><a href="../workshops.html">Workshops</a></li>
+        <li class="sub-item"><a href="../index.html#verleih">Deko-Verleih</a></li>
+        <li class="sub-item"><a href="../index.html#konzept">Konzept &amp; Beratung</a></li>
+        <li><a href="index.html">Galerie</a></li>
+        <li><a href="../empfehlungen.html">Empfehlungen</a></li>
+        <li><a href="../index.html#kontakt">Kontakt</a></li>
+        <li><a href="https://dekoperle.simplybook.it/v2/#book" class="cta" style="margin-top:.6rem" rel="noopener">Frag mich an</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero">
+  <div class="container">
+    <span class="script">Bildergalerie</span>
+    <h1>Momente, die wir gestalten durften</h1>
+    <p>Stöbere durch unsere Anlässe — von intimen Workshops bis zu großen Hochzeiten. Klick ein Bild für die Großansicht.</p>
+  </div>
+</section>
+
+<section class="container">
+  <h2 class="visually-hidden" style="position:absolute;left:-9999px">Galerie</h2>
+  <div class="filters" id="filters" role="group" aria-label="Kategorien filtern">
+    <button class="filter-btn active" data-filter="all" aria-pressed="true">Alle</button>
+    <button class="filter-btn" data-filter="workshops" aria-pressed="false">Workshops</button>
+    <button class="filter-btn" data-filter="events" aria-pressed="false">Events</button>
+    <button class="filter-btn" data-filter="hochzeiten" aria-pressed="false">Hochzeiten</button>
+    <button class="filter-btn" data-filter="jga" aria-pressed="false">JGA</button>
+    <button class="filter-btn" data-filter="geburtstage" aria-pressed="false">Geburtstage</button>
+  </div>
+
+  <div class="count" id="count" role="status" aria-live="polite"></div>
+
+  <div class="gallery" id="gallery"></div>
+</section>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildansicht">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Schließen">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Vorheriges Bild">‹</button>
+  <img id="lbImg" alt="" />
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Nächstes Bild">›</button>
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="script">Deko Perle</div>
+    <p>Mit Liebe gestaltet · Wuppertal</p>
+    <div class="legal">
+      <a href="../index.html">Startseite</a>
+      <a href="../workshops.html">Workshops</a>
+      <a href="../impressum.html">Impressum</a>
+      <a href="../datenschutz.html">Datenschutz</a>
+      <a href="../agb.html">AGB</a>
+    </div>
+    <p style="margin-top:1rem;opacity:.85;font-size:.85rem">© <span id="yr">2026</span> Deko Perle</p>
+  </div>
+</footer>
+
+<script>
+  // Year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Sticky nav
+  const navEl = document.getElementById('nav');
+  const onScroll = () => navEl.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // Mobile menu
+  const burger = document.getElementById('burger');
+  const mobile = document.getElementById('mobile');
+  const setMenu = (open) => {
+    mobile.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    burger.textContent = open ? '✕' : '☰';
+  };
+  burger.addEventListener('click', () => setMenu(!mobile.classList.contains('open')));
+  mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobile.classList.contains('open')) { setMenu(false); burger.focus(); }
+  });
+
+  // ===== Galerie =====
+  // slug: Datei in ../assets/img/
+  const IMG = '../assets/img/';
+  const items = [
+    // Workshops
+    { slug:'workshop-blumenbinden', cat:'workshops', title:'Hands-on Blumenbinden' },
+    { slug:'index-trockengemaelde', cat:'workshops', title:'Trockengemälde auf Leinwand' },
+
+    // Events
+    { slug:'hero-pampas', cat:'events', title:'Pampasgras-Kranz im goldenen Ring' },
+    { slug:'orange-gold-tafel', cat:'events', title:'Apricot Tafel-Setting mit Naturelementen',       size:'wide' },
+    { slug:'trockenblumen-kerzen-arrangement', cat:'events', title:'Trockenblumenadventskranz' },
+    { slug:'weihnachts-eleganz', cat:'events', title:'Adventskranz aus Tanne' },
+    { slug:'event-deko-details', cat:'events', title:'Zitronenliebe - mediterrane Eleganz' },
+    { slug:'tafel-mit-pampas', cat:'events', title:'Zitronenliebe - mediterrane Eleganz',          size:'wide' },
+
+    // Hochzeiten
+    { slug:'hochzeitstafel-rosa-lang', cat:'hochzeiten', title:'Lange Hochzeitstafel mit rosa Akzenten', size:'wide' },
+    { slug:'brautstrauss', cat:'hochzeiten', title:'Eleganter Trockenblumenhaarkranz',            size:'tall' },
+    { slug:'hochzeit-pampas-setup', cat:'hochzeiten', title:'Winni Puuh Babyshower',        size:'wide' },
+    { slug:'hochzeitstafel-panorama', cat:'hochzeiten', title:'Winni Puuh Babyshower',           size:'wide' },
+    { slug:'hochzeit-dekoration', cat:'hochzeiten', title:'Trockenblumen Hoops',       size:'wide' },
+    { slug:'luxe-hochzeit-arrangement', cat:'hochzeiten', title:'Trockenblumen Hoops',        size:'wide' },
+    { slug:'tafel-setup-hochzeit', cat:'hochzeiten', title:'Glitzer Zauber - Pimp dein Foto',           size:'tall' },
+    { slug:'tischdekor-gold', cat:'hochzeiten', title:'Brautpaarhochzeitstisch' },
+    { slug:'elegante-hochzeitstafel', cat:'hochzeiten', title:'Kristallklare Hochzeitstafel',      size:'wide' },
+    { slug:'festliches-hochzeit-ensemble', cat:'hochzeiten', title:'Festliches Hochzeits-Ensemble',     size:'wide' },
+    { slug:'index-hochzeitstafel-pink', cat:'hochzeiten', title:'Hochzeitsdeko im apricot Stil' },
+
+    // JGA
+    { slug:'jga-outdoor', cat:'jga', title:'Outdoor JGA-Party mit Gartendeko',   size:'wide' },
+
+    // Geburtstage
+    { slug:'geburtstags-arrangement', cat:'geburtstage', title:'Geburtstagsworkshop' },
+    { slug:'neon-glitter-party', cat:'geburtstage', title:'Neon-Glitter Party – modern & elegant' },
+
+    // Hochzeiten (Reihe 2026)
+    { slug:'tafel-gruen-kerzen', cat:'hochzeiten', title:'Sommerparty mit Korallen und Palmen',       size:'wide' },
+    { slug:'brauttisch-landhausstil', cat:'hochzeiten', title:'Mintgrüne Eleganz',      size:'wide' },
+    { slug:'bar-holzkisten', cat:'hochzeiten', title:'Snack- und Gin Bar',             size:'wide' },
+    { slug:'rosen-weiss-gruen', cat:'hochzeiten', title:'Blumengesteck für Traubogen' },
+    { slug:'braut-haarkranz', cat:'hochzeiten', title:'Kranz aus Blüten & Gräsern',         size:'tall' },
+    { slug:'tischdeko-kerzen-blumen', cat:'hochzeiten', title:'Frühlingsfrische in mint und weiß',   size:'tall' },
+    { slug:'mr-mrs-hochzeitssetup', cat:'hochzeiten', title:'Brauttisch mit romantischer Wasserfall-Drapierung',          size:'tall' },
+    { slug:'tisch-tropisches-gruen', cat:'hochzeiten', title:'Tropische Sommerhochzeit',        size:'wide' },
+    { slug:'freiluft-weisse-draperie', cat:'hochzeiten', title:'Traubogen im tropischen Flair',      size:'wide' },
+    { slug:'tisch-herbstfloristik', cat:'hochzeiten', title:'Romantische Tischdekoration',          size:'tall' },
+    { slug:'tafel-klassisch-weiss', cat:'hochzeiten', title:'Bohostyle Hochzeitsdekoration', size:'wide' },
+    { slug:'tafel-industrial-chic', cat:'hochzeiten', title:'Krystall trifft auf Eleganz',        size:'wide' },
+    { slug:'tischdeko-weisse-rosen', cat:'hochzeiten', title:'Eingangbereich in die Hochzeitslocation',            size:'wide' },
+    { slug:'hochzeitsdinner-loft', cat:'hochzeiten', title:'Krystall trifft auf Eleganz',         size:'tall' },
+    { slug:'boho-altar-holzrahmen', cat:'hochzeiten', title:'Krystall trifft auf Eleganz',       size:'wide' },
+    { slug:'boho-spiegel-flora', cat:'hochzeiten', title:'Traubogen mit Trockenblumensteck',           size:'tall' },
+    { slug:'tischkaertchen-pampas', cat:'hochzeiten', title:'Willkommensspiegel mit Boho-Elementen',        size:'tall' },
+    { slug:'hochzeit-steinbogen', cat:'hochzeiten', title:'Boho-Chic mit Naturmaterialien',      size:'tall' },
+    { slug:'tischdeko-holz-kerzen', cat:'hochzeiten', title:'Boho-Chic mit Naturmaterialien',             size:'tall' },
+    { slug:'blumenarrangement-blush', cat:'hochzeiten', title:'Geschenketisch mit floralen Akzenten',          size:'tall' },
+    { slug:'hochzeitsdeko-frisch', cat:'hochzeiten', title:'Frisches Arrangement für eine Hochzeit',      size:'wide' },
+    { slug:'bankett-modern', cat:'hochzeiten', title:'Frisches Arrangement für eine Hochzeit',                size:'wide' },
+    { slug:'tafel-blassrosa-perlen', cat:'hochzeiten', title:'Frisches Arrangement für eine Hochzeit',      size:'wide' },
+    { slug:'blumeninstallation-pink', cat:'events', title:'Firmenevent im Industrie-Loft',        size:'wide' },
+    { slug:'tisch-gold-salbei', cat:'events', title:'Firmenevent im Industrie-Loft',                   size:'wide' },
+    { slug:'festsaal-violett', cat:'hochzeiten', title:'Mint trifft auf Gold',             size:'wide' },
+    { slug:'bankettsaal-weiss', cat:'events', title:'Brauttisch mit Eukalyptus und Schleierkraut',              size:'tall' },
+    { slug:'tischdeko-weiss-gold', cat:'events', title:'Mint trifft auf Gold',                     size:'wide' },
+    { slug:'festsaal-blaue-vorhaenge', cat:'hochzeiten', title:'Ein runder Geburtstag mit Stil',   size:'wide' },
+    { slug:'liebesauto-blumendeko', cat:'hochzeiten', title:'Ein runder Geburtstag mit Stil',        size:'wide' },
+    { slug:'tafel-glasdach', cat:'hochzeiten', title:'Hochzeitsauto mit Blumenarrangement',        size:'tall' },
+    { slug:'eleganz-schwarz-kristall', cat:'events', title:'Mint trifft auf Silber',              size:'wide' },
+
+    // Events (Reihe 2026)
+    { slug:'abend-pink-drapierung', cat:'events', title:'Firmenevent im Industrie-Loft',        size:'tall' },
+    { slug:'abendempfang-loft', cat:'events', title:'Firmenevent im Industrie-Loft',               size:'wide' },
+    { slug:'buchstaben-installation', cat:'events', title:'Tafel in Silber & Schwarz',         size:'wide' },
+    { slug:'dinner-spiegelwand', cat:'events', title:'Tafel in Silber & Schwarz',    size:'wide' },
+    { slug:'neue-projekte', cat:'events', title:'Tafel in Silber & Schwarz',     size:'tall' }
+  ];
+
+  const labels = {
+    workshops:'Workshop', events:'Event',
+    hochzeiten:'Hochzeit', jga:'JGA', geburtstage:'Geburtstag'
+  };
+
+  const galleryEl = document.getElementById('gallery');
+  const countEl = document.getElementById('count');
+
+  function render(filter){
+    galleryEl.innerHTML = '';
+    const list = items.filter(it => filter === 'all' || it.cat === filter);
+    list.forEach((it, idx) => {
+      const fig = document.createElement('figure');
+      fig.className = 'card' + (it.size ? ' ' + it.size : '');
+      fig.innerHTML = `
+        <img src="${IMG}${it.slug}-1400.jpg" alt="${it.title}" width="1400" height="1400"
+             loading="lazy" decoding="async" />
+        <span class="badge">${labels[it.cat]}</span>
+        <span class="overlay" aria-hidden="true"></span>
+        <button class="card-btn" type="button" aria-label="${it.title} — in Großansicht öffnen"></button>
+        <figcaption class="caption">${it.title}</figcaption>
+      `;
+      fig.querySelector('.card-btn').addEventListener('click', () => openLightbox(list, idx));
+      galleryEl.appendChild(fig);
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) fig.classList.add('show');
+      else requestAnimationFrame(() => setTimeout(() => fig.classList.add('show'), idx * 45));
+    });
+    countEl.textContent = `${list.length} ${list.length === 1 ? 'Bild' : 'Bilder'} in dieser Auswahl`;
+  }
+
+  // Filter buttons
+  document.getElementById('filters').addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if(!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed','false');
+    });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed','true');
+    render(btn.dataset.filter);
+  });
+
+  render('all');
+
+  // ===== Lightbox =====
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCap = document.getElementById('lbCap');
+  const lbClose = document.getElementById('lbClose');
+  let currentList = [], currentIdx = 0, lastFocus = null;
+
+  function openLightbox(list, idx){
+    currentList = list; currentIdx = idx;
+    lastFocus = document.activeElement;
+    update();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    lbClose.focus();
+  }
+  function closeLightbox(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  function update(){
+    const it = currentList[currentIdx];
+    lbImg.src = `${IMG}${it.slug}-1400.jpg`;
+    lbImg.alt = it.title;
+    lbCap.textContent = `${it.title} (${currentIdx + 1} von ${currentList.length})`;
+  }
+  function next(){ currentIdx = (currentIdx + 1) % currentList.length; update(); }
+  function prev(){ currentIdx = (currentIdx - 1 + currentList.length) % currentList.length; update(); }
+
+  lbClose.addEventListener('click', closeLightbox);
+  document.getElementById('lbNext').addEventListener('click', next);
+  document.getElementById('lbPrev').addEventListener('click', prev);
+  lb.addEventListener('click', e => { if(e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if(!lb.classList.contains('open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowRight') next();
+    if(e.key === 'ArrowLeft') prev();
+    // Fokus im Dialog halten
+    if(e.key === 'Tab'){
+      const f = [lbClose, document.getElementById('lbPrev'), document.getElementById('lbNext')];
+      const i = f.indexOf(document.activeElement);
+      e.preventDefault();
+      f[(i + (e.shiftKey ? -1 : 1) + f.length) % f.length].focus();
+    }
+  });
+</script>
+</body>
+</html>
+

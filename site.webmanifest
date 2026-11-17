@@ -1,0 +1,15 @@
+{
+  "name": "Deko Perle · Eventdekoration & Verleih in Wuppertal",
+  "short_name": "Deko Perle",
+  "description": "Eventdekoration, Deko-Verleih und Workshops in Wuppertal und Umgebung.",
+  "lang": "de-DE",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fbf9f5",
+  "theme_color": "#fbf9f5",
+  "icons": [
+    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/logo-perle.png", "sizes": "48x48", "type": "image/png" }
+  ]
+}
